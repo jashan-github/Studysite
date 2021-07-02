@@ -60,6 +60,7 @@ Route::middleware(['auth-user'])->group(function () {
     Route::get('logout', [logoutController::class, 'logout']);
 
     Route::get('Clang',[DashboardController::class,'clang']);
+
     Route::get('C++',[DashboardController::class,'Cplus']);
     Route::get('Java',[DashboardController::class,'Java']);
 
