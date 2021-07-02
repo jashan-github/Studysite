@@ -1,0 +1,10 @@
+.my-button{
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    margin-left: 80%;
+    border-radius: 5px;
+    font-style: unset;
+    font-family:sans-serif;
+    margin-top: 1px;
+}
