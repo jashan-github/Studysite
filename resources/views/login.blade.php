@@ -41,11 +41,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="label-agree-term">
-                        <a href="{{ url('/forgot_password') }}">Forgot Password</a>
-                    </label>
-                    </div>
                     <div class="card-footer d-inline-block">
                         <button type="submit" class="btn btn-success"> Login </button>
                         <p class="float-right mt-2"> Don't have an account?  <a href="{{ url('user-signup')}}" class="text-success"> Register </a> </p>

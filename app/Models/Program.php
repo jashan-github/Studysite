@@ -10,6 +10,6 @@ class Program extends Model
     use HasFactory;
     protected $fillable = [
         'topic',
-        'programs',
+        'programs'
     ];
 }

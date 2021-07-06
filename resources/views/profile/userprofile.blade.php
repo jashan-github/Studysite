@@ -1,6 +1,5 @@
 @extends('master')
 
-@include('layouts.navbar')
 @section('content')
 
     <section class="py-2">
@@ -8,6 +7,7 @@
             <div class="row">
                 <div class="col-md-10">
                     <div class=" col-15 m-auto">
+                        <h1> My profile Page</h1><br>
 
                             <div class="card-body">
                                 @if(Session::has('success'))
@@ -18,7 +18,7 @@
                                         @endphp
                                     </div>
                                 @endif
-                            <h1> My profile Page</h1><br>
+
                             <form action="profile-update" method="post">
                                 @csrf
                             <div class="form-group col-md-5 m-auto ">
@@ -37,7 +37,7 @@
                                 <label for="name"> Pincode </label>
                                 <input type="text" name="pincode" class="form-control" value="{{ $user->pincode }}" /><br>
                                 <div class="form-group col-md-5 m-auto">
-                                <button type="submit" class="btn btn-success">UPDATE PROFILE</button>
+                                <button type="submit" class="btn btn-primary">UPDATE PROFILE</button>
                             </div>
                         </div>
                         </form>

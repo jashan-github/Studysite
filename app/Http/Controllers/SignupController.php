@@ -45,7 +45,7 @@ class SignupController extends Controller
 
         // ----------------register user
 
-        $user           =           User::create($inputArray);
+             $user = User::create($inputArray);
 
         // if registration success then return with success message
 

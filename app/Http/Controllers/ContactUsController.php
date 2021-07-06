@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Mail;
 class ContactUsController extends Controller
 {
    // Create Contact Form
-   public function createForm(Request $request) {
+    public function createForm(Request $request) {
 
     return view('ContactUs');
   }
 
   // Store Contact Form data
-  public function contactUs(Request $request) {
+    public function contactUs(Request $request) {
 
       // Form validation
       $this->validate($request, [
@@ -27,13 +27,11 @@ class ContactUsController extends Controller
        ]);
 
       //  Store data in database
+
       $contact=Contact::create($request->all());
-
-
 
       Mail::to('jashanmittal75511@gmail.com')->send(new ContactUs($contact));
       return back()->with('success', 'successfully submitted');
     }
-
 
 }

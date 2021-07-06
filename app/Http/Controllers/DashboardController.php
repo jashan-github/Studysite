@@ -20,13 +20,5 @@ class DashboardController extends Controller
 
             return view('dashboard');
     }
-    // public function Clang(){
-    //     return view('Clang');
-    //     }
-    //     public function Cplus(){
-    //         return view('C++');
-    //         }
-    //         public function Java(){
-    //             return view('Java');
-    //             }
-    }
+
+}

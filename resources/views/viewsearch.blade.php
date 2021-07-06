@@ -44,15 +44,6 @@
                     </thead>
                     <?php
                      $i = 1;
-                     if(isset($_GET['page'])){
-                         $page = $_GET['page'];
-                     }else{
-                         $page = 0;
-                     }
-                     if($page ==2){
-                            $i =6;
-                     }
-
                      foreach ($items as $programs){
 
                         ?>
@@ -67,9 +58,6 @@
                     <?php  $i++; } ?>
             </table>
         </div>
-    </div>
-    <div class="text-center">
-        {{ $items->links() }}
     </div>
 </div>
 

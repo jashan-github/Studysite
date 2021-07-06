@@ -60,3 +60,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Features:
+1. Registration 
+2. Login
+3. Dashborad
+4. Programs
+5. Contact Us
+6. My-Profile
+7. Change Password
+8. Logout
+
+StudySite is our project using laravel we created and in this project we will new registration, login and list of programs 
+In Programs section we can easily add new programs and edit existing programs and delete individual program. 
+We can also use search functionality to search anything.
+Other one is we can change password and edit our profile and change any detail like name, mobile number, city and pincode.
+User can easily contact with us using Contact Us feature. 

@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Session;
 
 class logoutController extends Controller
 {
-    // --[ User logout function ] 
+    // --[ User logout function ]
+
     public function logout(Request $request)
     {
         $request->session()->flush();

@@ -9,13 +9,7 @@
                     <div class="card shadow mb-4">
                         <div class="car-header bg-success pt-2">
                             <div class="card-title font-weight-bold text-white text-center">
-                                <style>
-                                    /* body {
-                                        margin-top: 50px;
-                                        margin-right: 30px;
 
-                                    } */
-                                </style>
                                <h4> Welcome to StudySite </h4>
                             </div>
                         </div>

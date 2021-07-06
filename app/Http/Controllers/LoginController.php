@@ -19,16 +19,17 @@ class LoginController extends Controller
         return view('login');
     }
 
-    // --------------------- [ User login ]
-    public function userlogin(Request $request)
-    {
-        $request->validate([
+    // [-- User login --]
+
+    public function userlogin(Request $request) {
+
+            $request->validate([
             "email" => "required|email",
             "password" => "required|min:6"
         ]);
         $userAuth = $request->only('email', 'password');
 
-        //---------------[ check user ]
+        //[ -- Check user --]
 
         if (Auth::attempt($userAuth)) {
             return redirect()->intended('dashboard');
