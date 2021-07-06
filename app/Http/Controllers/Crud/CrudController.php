@@ -9,11 +9,7 @@ use App\Http\Controllers\Controller;
 
 class CrudController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $items = Program::paginate(5);
@@ -21,11 +17,8 @@ class CrudController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    // {{ * Show the form for creating a new resource.* }}
     public function create()
     {
         return view('Crud.insert');
@@ -72,6 +65,7 @@ class CrudController extends Controller
 
         return redirect('Programs')->with('success', 'Record Update successfully');
     }
+
     /**Remove the specified resource from storage.*/
     public function destroy($id)
     {

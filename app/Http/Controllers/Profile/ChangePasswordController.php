@@ -28,6 +28,7 @@ class ChangePasswordController extends Controller
                 'old_password'=>'required',
                 'new_password'=>'required',
             ]);
+
             $new_password = $request->get('new_password');
             $user = Auth::User();
 
@@ -40,7 +41,3 @@ class ChangePasswordController extends Controller
 
         }
     }
-
-
-
-

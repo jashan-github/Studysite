@@ -4,7 +4,6 @@
 @section('content')
 
     <div class="container">
-        <div class="jumbotron"><br>
             @if (Session::has('success'))
                 <div class="alert alert-success">
                     {{ Session::get('success') }}
@@ -19,7 +18,7 @@
                 <form action="{{ url('/search') }}" method="post">
                     @csrf
                     <div class="input-group">
-                        <input type="seach" name="search" id="search" class="form-control">
+                        <input type="search" name="search" id="search" class="form-control">
                         <span class="input-group-prepend">
                             <button type="submit" class="btn btn-primary"> Search</button>
                         </span>
@@ -32,7 +31,7 @@
             </div><br>
 
             <table class="table table-borded">
-                <thead class="thead-dark">
+                <thead>
                     <tr>
                         <th> ID</th>
                         <th> Topic</th>
@@ -43,35 +42,32 @@
                 <tbody>
                     </thead>
                     <?php
-                     $i = 1;
-                     if(isset($_GET['page'])){
-                         $page = $_GET['page'];
-                     }else{
-                         $page = 0;
-                     }
-                     if($page ==2){
-                            $i =6;
-                     }
+                    $i = 1;
+                    if (isset($_GET['page'])) {
+                    $page = $_GET['page'];
+                    } else {
+                    $page = 0;
+                    }
+                    if ($page == 2) {
+                    $i = 6;
+                    }
 
-                     foreach ($items as $programs){
-
-                        ?>
-                        <tr style="background: white;">
-                            <td> {{ $i }}</td>
-                            <td> {{ $programs->topic }}</td>
-                            <td> {{ $programs->programs }}</td>
-                            <td> <a href={{ 'edit/' . $programs->id }}> Edit </a> </td>
-                            <td> <a onclick="return confirm('Are you sure you want to delete this item?');"
-                                    href={{ 'delete/' . $programs->id }}> Delete </a> </td>
-                        </tr>
-                    <?php  $i++; } ?>
+                    foreach ($items as $programs) { ?>
+                    <tr style="background: white;">
+                        <td> {{ $i }}</td>
+                        <td> {{ $programs->topic }}</td>
+                        <td> {{ $programs->programs }}</td>
+                        <td> <a href={{ 'edit/' . $programs->id }}> Edit </a> </td>
+                        <td> <a onclick="return confirm('Are you sure you want to delete this item?');"
+                                href={{ 'delete/' . $programs->id }}> Delete </a> </td>
+                    </tr>
+                    <?php $i++;}
+                    ?>
             </table>
         </div>
+        <div>
+            {{ $items->links() }}
+        </div>
     </div>
-    <div class="text-center">
-        {{ $items->links() }}
-    </div>
-</div>
-
 
 @endsection

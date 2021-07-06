@@ -13,10 +13,8 @@ class SearchController extends Controller
 
         $q= $request->get('search');
 
-        // $items= DB::table('programs')->where('topic', 'like', '%'.$q. '%')->paginate(5);
         $items= DB::table('programs')->where('topic', 'like', '%'.$q. '%')->paginate(500);
 
-        //return view('programs',compact('items'));
         return view('viewsearch',compact('items'));
     }
 }
